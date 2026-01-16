@@ -45,7 +45,7 @@ export default function AdniraLandingPage() {
       accentColor: "red"
     },
     {
-      title: "Pembayaran Digital Terintegrasi",
+      title: "Complete B2B & H2H Solutions",
       subtitle: "PPOB Host to Host yang Stabil & Aman",
       description: "Sistem pembayaran digital real-time dengan uptime tinggi untuk mendukung pertumbuhan bisnis mitra",
       gradient: "from-purple-900/90 via-blue-800/85 to-slate-900/90",
