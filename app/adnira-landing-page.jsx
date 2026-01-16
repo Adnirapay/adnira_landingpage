@@ -45,7 +45,7 @@ export default function AdniraLandingPage() {
       accentColor: "red"
     },
     {
-      title: "Complete B2B & H2H Solutions",
+      title: "Pembayaran Digital Terintegrasi",
       subtitle: "PPOB Host to Host yang Stabil & Aman",
       description: "Sistem pembayaran digital real-time dengan uptime tinggi untuk mendukung pertumbuhan bisnis mitra",
       gradient: "from-purple-900/90 via-blue-800/85 to-slate-900/90",
@@ -450,26 +450,28 @@ export default function AdniraLandingPage() {
                     key={`partner-${num}`}
                     className="partner-item group"
                   >
-                    <div className="relative w-full h-full bg-slate-900/50 backdrop-blur-sm rounded-xl border border-slate-800 flex items-center justify-center hover:border-blue-500 hover:bg-slate-800/80 transition-all duration-300">
-                      {/* Placeholder Logo */}
-                      <div className="text-center p-6">
-                        <div className="w-16 h-16 bg-gradient-to-br from-blue-500/20 to-red-500/20 rounded-lg mx-auto mb-3 flex items-center justify-center group-hover:scale-110 transition-transform">
-                          <div className="w-12 h-12 bg-gradient-to-br from-blue-400 to-red-500 rounded-lg flex items-center justify-center">
-                            <span className="text-white font-black text-lg">{num}</span>
-                          </div>
-                        </div>
-                        <p className="text-slate-500 text-xs font-semibold group-hover:text-slate-400 transition-colors">
-                          Partner {num}
-                        </p>
-                      </div>
-
-                      {/* Replace with actual logo:
+                    <div className="relative w-full h-full bg-slate-900/50 backdrop-blur-sm rounded-xl border border-slate-800 flex items-center justify-center hover:border-blue-500 hover:bg-slate-800/80 transition-all duration-300 p-6">
                       <img 
                         src={`/images/partners/partner-${num}.png`}
-                        alt={`Partner ${num}`}
-                        className="w-32 h-16 object-contain opacity-60 group-hover:opacity-100 transition-opacity"
+                        alt={`Partner ${num} - PT Adnira Dalil Anugrah`}
+                        className="max-w-full max-h-full object-contain opacity-70 group-hover:opacity-100 transition-opacity filter grayscale group-hover:grayscale-0"
+                        onError={(e) => {
+                          // Fallback if image not found
+                          e.target.style.display = 'none';
+                          e.target.parentElement.innerHTML = `
+                            <div class="text-center">
+                              <div class="w-16 h-16 bg-gradient-to-br from-blue-500/20 to-red-500/20 rounded-lg mx-auto mb-3 flex items-center justify-center">
+                                <div class="w-12 h-12 bg-gradient-to-br from-blue-400 to-red-500 rounded-lg flex items-center justify-center">
+                                  <span class="text-white font-black text-lg">${num}</span>
+                                </div>
+                              </div>
+                              <p class="text-slate-500 text-xs font-semibold">
+                                Partner ${num}
+                              </p>
+                            </div>
+                          `;
+                        }}
                       />
-                      */}
                     </div>
                   </div>
                 ))}
@@ -480,18 +482,28 @@ export default function AdniraLandingPage() {
                     key={`partner-dup-${num}`}
                     className="partner-item group"
                   >
-                    <div className="relative w-full h-full bg-slate-900/50 backdrop-blur-sm rounded-xl border border-slate-800 flex items-center justify-center hover:border-blue-500 hover:bg-slate-800/80 transition-all duration-300">
-                      {/* Placeholder Logo */}
-                      <div className="text-center p-6">
-                        <div className="w-16 h-16 bg-gradient-to-br from-blue-500/20 to-red-500/20 rounded-lg mx-auto mb-3 flex items-center justify-center group-hover:scale-110 transition-transform">
-                          <div className="w-12 h-12 bg-gradient-to-br from-blue-400 to-red-500 rounded-lg flex items-center justify-center">
-                            <span className="text-white font-black text-lg">{num}</span>
-                          </div>
-                        </div>
-                        <p className="text-slate-500 text-xs font-semibold group-hover:text-slate-400 transition-colors">
-                          Partner {num}
-                        </p>
-                      </div>
+                    <div className="relative w-full h-full bg-slate-900/50 backdrop-blur-sm rounded-xl border border-slate-800 flex items-center justify-center hover:border-blue-500 hover:bg-slate-800/80 transition-all duration-300 p-6">
+                      <img 
+                        src={`/images/partners/partner-${num}.png`}
+                        alt={`Partner ${num} - PT Adnira Dalil Anugrah`}
+                        className="max-w-full max-h-full object-contain opacity-70 group-hover:opacity-100 transition-opacity filter grayscale group-hover:grayscale-0"
+                        onError={(e) => {
+                          // Fallback if image not found
+                          e.target.style.display = 'none';
+                          e.target.parentElement.innerHTML = `
+                            <div class="text-center">
+                              <div class="w-16 h-16 bg-gradient-to-br from-blue-500/20 to-red-500/20 rounded-lg mx-auto mb-3 flex items-center justify-center">
+                                <div class="w-12 h-12 bg-gradient-to-br from-blue-400 to-red-500 rounded-lg flex items-center justify-center">
+                                  <span class="text-white font-black text-lg">${num}</span>
+                                </div>
+                              </div>
+                              <p class="text-slate-500 text-xs font-semibold">
+                                Partner ${num}
+                              </p>
+                            </div>
+                          `;
+                        }}
+                      />
                     </div>
                   </div>
                 ))}
@@ -657,31 +669,38 @@ export default function AdniraLandingPage() {
                   key={`img-${num}`}
                   className="gallery-item group"
                 >
-                  <div className="relative w-full h-full bg-gradient-to-br from-slate-800 to-slate-900 rounded-xl overflow-hidden border border-slate-700 group-hover:border-blue-500 transition-all duration-300">
-                    {/* Placeholder - Replace with actual images */}
-                    <div className="absolute inset-0 flex items-center justify-center backdrop-blur-sm">
-                      <div className="text-center p-6">
-                        <div className="w-20 h-20 bg-gradient-to-br from-blue-500 to-red-600 rounded-xl mx-auto mb-4 flex items-center justify-center group-hover:scale-110 transition-transform">
-                          <span className="text-3xl font-black text-white">{num}</span>
-                        </div>
-                        <p className="text-slate-400 text-sm font-semibold">
-                          Gallery Image {num}
+                  <div className="relative w-full h-full rounded-xl overflow-hidden border border-slate-700 group-hover:border-blue-500 transition-all duration-300">
+                    <img 
+                      src={`/images/gallery/gallery-${num}.jpg`}
+                      alt={`PT Adnira Dalil Anugrah - Gallery ${num}`}
+                      className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
+                      onError={(e) => {
+                        // Fallback if image not found
+                        e.target.style.display = 'none';
+                        e.target.parentElement.innerHTML = `
+                          <div class="absolute inset-0 flex items-center justify-center bg-gradient-to-br from-slate-800 to-slate-900">
+                            <div class="text-center p-6">
+                              <div class="w-20 h-20 bg-gradient-to-br from-blue-500 to-red-600 rounded-xl mx-auto mb-4 flex items-center justify-center">
+                                <span class="text-3xl font-black text-white">${num}</span>
+                              </div>
+                              <p class="text-slate-400 text-sm">Gallery ${num}</p>
+                            </div>
+                          </div>
+                        `;
+                      }}
+                    />
+                    
+                    {/* Hover Overlay with Caption */}
+                    <div className="absolute inset-0 bg-gradient-to-t from-blue-900/80 via-blue-900/40 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end">
+                      <div className="p-6 w-full">
+                        <p className="text-white font-bold text-lg drop-shadow-lg">
+                          Armada & Layanan Profesional
                         </p>
-                        <p className="text-slate-500 text-xs mt-1">
-                          400 x 300 px
+                        <p className="text-blue-200 text-sm mt-1">
+                          PT Adnira Dalil Anugrah
                         </p>
                       </div>
                     </div>
-                    
-                    {/* Image placeholder background pattern */}
-                    <div className="absolute inset-0 opacity-10">
-                      <div className="w-full h-full" style={{
-                        backgroundImage: 'repeating-linear-gradient(45deg, transparent, transparent 10px, rgba(255,255,255,0.05) 10px, rgba(255,255,255,0.05) 20px)',
-                      }}></div>
-                    </div>
-
-                    {/* Hover Overlay */}
-                    <div className="absolute inset-0 bg-gradient-to-t from-blue-600/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
                   </div>
                 </div>
               ))}
@@ -692,31 +711,38 @@ export default function AdniraLandingPage() {
                   key={`img-dup-${num}`}
                   className="gallery-item group"
                 >
-                  <div className="relative w-full h-full bg-gradient-to-br from-slate-800 to-slate-900 rounded-xl overflow-hidden border border-slate-700 group-hover:border-blue-500 transition-all duration-300">
-                    {/* Placeholder - Replace with actual images */}
-                    <div className="absolute inset-0 flex items-center justify-center backdrop-blur-sm">
-                      <div className="text-center p-6">
-                        <div className="w-20 h-20 bg-gradient-to-br from-blue-500 to-red-600 rounded-xl mx-auto mb-4 flex items-center justify-center group-hover:scale-110 transition-transform">
-                          <span className="text-3xl font-black text-white">{num}</span>
-                        </div>
-                        <p className="text-slate-400 text-sm font-semibold">
-                          Gallery Image {num}
+                  <div className="relative w-full h-full rounded-xl overflow-hidden border border-slate-700 group-hover:border-blue-500 transition-all duration-300">
+                    <img 
+                      src={`/images/gallery/gallery-${num}.jpg`}
+                      alt={`PT Adnira Dalil Anugrah - Gallery ${num}`}
+                      className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
+                      onError={(e) => {
+                        // Fallback if image not found
+                        e.target.style.display = 'none';
+                        e.target.parentElement.innerHTML = `
+                          <div class="absolute inset-0 flex items-center justify-center bg-gradient-to-br from-slate-800 to-slate-900">
+                            <div class="text-center p-6">
+                              <div class="w-20 h-20 bg-gradient-to-br from-blue-500 to-red-600 rounded-xl mx-auto mb-4 flex items-center justify-center">
+                                <span class="text-3xl font-black text-white">${num}</span>
+                              </div>
+                              <p class="text-slate-400 text-sm">Gallery ${num}</p>
+                            </div>
+                          </div>
+                        `;
+                      }}
+                    />
+                    
+                    {/* Hover Overlay with Caption */}
+                    <div className="absolute inset-0 bg-gradient-to-t from-blue-900/80 via-blue-900/40 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end">
+                      <div className="p-6 w-full">
+                        <p className="text-white font-bold text-lg drop-shadow-lg">
+                          Armada & Layanan Profesional
                         </p>
-                        <p className="text-slate-500 text-xs mt-1">
-                          400 x 300 px
+                        <p className="text-blue-200 text-sm mt-1">
+                          PT Adnira Dalil Anugrah
                         </p>
                       </div>
                     </div>
-                    
-                    {/* Image placeholder background pattern */}
-                    <div className="absolute inset-0 opacity-10">
-                      <div className="w-full h-full" style={{
-                        backgroundImage: 'repeating-linear-gradient(45deg, transparent, transparent 10px, rgba(255,255,255,0.05) 10px, rgba(255,255,255,0.05) 20px)',
-                      }}></div>
-                    </div>
-
-                    {/* Hover Overlay */}
-                    <div className="absolute inset-0 bg-gradient-to-t from-blue-600/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
                   </div>
                 </div>
               ))}
