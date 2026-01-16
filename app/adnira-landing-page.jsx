@@ -857,7 +857,7 @@ export default function AdniraLandingPage() {
                   <div>
                     <p className="text-sm">Email</p>
                     <a href="mailto:info@adnira.com" className="text-white hover:text-blue-400 transition-colors">
-                      info@adnira.com
+                      adnira.id@gmail.com
                     </a>
                   </div>
                 </li>
@@ -866,7 +866,7 @@ export default function AdniraLandingPage() {
                   <div>
                     <p className="text-sm">Telepon</p>
                     <a href="tel:+62" className="text-white hover:text-blue-400 transition-colors">
-                      +62 xxx xxxx xxxx
+                      +62 811 9696 4004
                     </a>
                   </div>
                 </li>
@@ -875,7 +875,7 @@ export default function AdniraLandingPage() {
                   <div>
                     <p className="text-sm">Alamat</p>
                     <p className="text-white">
-                      Jakarta, Indonesia
+                      Bandung, Indonesia
                     </p>
                   </div>
                 </li>
